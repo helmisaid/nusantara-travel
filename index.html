@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Nusantara - Jelajahi Keindahan Indonesia</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #00917C;
+            --secondary-color: #FFC93C;
+            --third-color: #00535b;
+            --accent-color: #FF5757;
+            --dark-color: #2E4057;
+            --light-color: #F9F9F9;
+            --success-color: #4CAF50;
+            --info-color: #00B4D8;
+            --warning-color: #FFC93C;
+            --danger-color: #FF5757;
+        }
+        
+        .bg-primary {
+            background-color: var(--primary-color) !important;
+        }
+        
+        .bg-secondary {
+            background-color: var(--secondary-color) !important;
+        }
+        
+        .bg-accent {
+            background-color: var(--accent-color) !important;
+        }
+        
+        .bg-custom-dark {
+            background-color: var(--dark-color) !important;
+        }
+        
+        .bg-custom-light {
+            background-color: var(--light-color) !important;
+        }
+        
+        .text-primary {
+            color: var(--primary-color) !important;
+        }
+        
+        .text-secondary {
+            color: var(--secondary-color) !important;
+        }
+        
+        .text-accent {
+            color: var(--accent-color) !important;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover, .btn-primary:focus {
+            background-color: #007c69;
+            border-color: #007c69;
+        }
+        
+        .btn-outline-primary {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .badge.bg-primary {
+            background-color: var(--primary-color) !important;
+        }
+        
+        .badge.bg-secondary {
+            background-color: var(--secondary-color) !important;
+            color: var(--dark-color) !important;
+        }
+        
+        .badge.bg-success {
+            background-color: var(--success-color) !important;
+        }
+        
+        .badge.bg-info {
+            background-color: var(--info-color) !important;
+        }
+        
+        .badge.bg-warning {
+            background-color: var(--warning-color) !important;
+            color: var(--dark-color) !important;
+        }
+        
+        .badge.bg-danger {
+            background-color: var(--danger-color) !important;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/labuan-bajo.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .bg-light-blue {
+            background-color: #f0f7f4;
+        }
+        
+        .navbar {
+            background-color: var(--third-color) !important;
+        }
+        
+        footer {
+            background-color: var(--third-color) !important;
+        }
+        
+        .card {
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-body {
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .form-control:focus, .form-select:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(0, 145, 124, 0.25);
+        }
+        
+        .bi-check-circle-fill {
+            color: var(--success-color) !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Travel Nusantara</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="#profile">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Layanan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#packages">Paket Wisata</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Hubungi Kami</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold">Jelajahi Keindahan Nusantara</h1>
+            <p class="lead">Temukan pengalaman wisata terbaik di seluruh Indonesia bersama kami</p>
+            <a href="#packages" class="btn btn-primary btn-lg mt-3">Lihat Paket Wisata</a>
+        </div>
+    </header>
+
+    <!-- Profile Section -->
+    <section id="profile" class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="assets/images/company.jpg" alt="Travel Nusantara Team" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="mb-4">Tentang Travel Nusantara</h2>
+                    <p class="lead">Kami adalah penyedia jasa perjalanan wisata terpercaya di Indonesia sejak 2025.</p>
+                    <p>Travel Nusantara hadir untuk memberikan pengalaman wisata terbaik dengan mengutamakan kenyamanan, keamanan, dan kepuasan pelanggan. Dengan tim profesional dan berpengalaman, kami siap membantu Anda menjelajahi keindahan Nusantara.</p>
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-check-circle-fill me-2"></i>
+                                <span>Pelayanan Profesional</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-check-circle-fill me-2"></i>
+                                <span>Harga Terjangkau</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-check-circle-fill me-2"></i>
+                                <span>Destinasi Terbaik</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-check-circle-fill me-2"></i>
+                                <span>Pengalaman Terpercaya</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding bg-light-blue">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="mb-3">Layanan Kami</h2>
+                <p class="lead">Berbagai layanan perjalanan untuk memenuhi kebutuhan wisata Anda</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-airplane service-icon"></i>
+                            <h4>Paket Wisata</h4>
+                            <p>Kami menyediakan berbagai paket wisata ke destinasi populer di seluruh Indonesia dengan harga terjangkau dan fasilitas terbaik.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-building service-icon"></i>
+                            <h4>Reservasi Hotel</h4>
+                            <p>Dapatkan penawaran khusus untuk akomodasi di berbagai hotel dan resort terbaik di seluruh Indonesia.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-ticket-perforated service-icon"></i>
+                            <h4>Tiket Transportasi</h4>
+                            <p>Kami menyediakan layanan pemesanan tiket pesawat, kereta api, dan transportasi lainnya untuk perjalanan Anda.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-people service-icon"></i>
+                            <h4>Tour Guide</h4>
+                            <p>Pemandu wisata profesional yang berpengalaman dan menguasai informasi tentang destinasi wisata.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-car-front service-icon"></i>
+                            <h4>Sewa Kendaraan</h4>
+                            <p>Layanan sewa mobil dan bus pariwisata dengan kondisi prima dan sopir berpengalaman.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-briefcase service-icon"></i>
+                            <h4>Wisata Korporat</h4>
+                            <p>Paket khusus untuk kegiatan perusahaan seperti outing, gathering, dan team building.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="mb-3">Paket Wisata Unggulan</h2>
+                <p class="lead">Pilihan paket wisata terbaik untuk pengalaman liburan tak terlupakan</p>
+            </div>
+            <div class="row g-4">
+                <!-- Bali Package -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow">
+                        <img src="assets/images/bali.jpg" class="card-img-top" alt="Bali">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="card-title mb-0">Pesona Bali</h5>
+                                <span class="badge bg-primary">Bestseller</span>
+                            </div>
+                            <p class="text-muted"><i class="bi bi-clock me-1"></i> 4 Hari 3 Malam</p>
+                            <p class="card-text">Nikmati keindahan Pulau Dewata dengan mengunjungi Pantai Kuta, Ubud, Tanah Lot, dan berbagai destinasi menarik lainnya.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Hotel Bintang 4</li>
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Termasuk Makan 3x Sehari</li>
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Tour Guide Profesional</li>
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Tiket Masuk Objek Wisata</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <h4 class="text-primary mb-0">Rp 4.500.000</h4>
+                                <a href="#contact" class="btn btn-outline-primary">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Lombok Package -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow">
+                        <img src="assets/images/lombok.jpg" class="card-img-top" alt="Lombok">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="card-title mb-0">Eksotis Lombok</h5>
+                                <span class="badge bg-danger">Hot Deal</span>
+                            </div>
+                            <p class="text-muted"><i class="bi bi-clock me-1"></i> 3 Hari 2 Malam</p>
+                            <p class="card-text">Jelajahi keindahan Lombok dengan mengunjungi Pantai Senggigi, Gili Trawangan, dan Desa Sade.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Hotel Bintang 3</li>
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Termasuk Makan 3x Sehari</li>
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Tour Guide Profesional</li>
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Tiket Masuk Objek Wisata</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <h4 class="text-primary mb-0">Rp 3.200.000</h4>
+                                <a href="#contact" class="btn btn-outline-primary">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Raja Ampat Package -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow">
+                        <img src="assets/images/raja-ampat.jpg" class="card-img-top" alt="Raja Ampat">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="card-title mb-0">Surga Raja Ampat</h5>
+                                <span class="badge bg-success">Premium</span>
+                            </div>
+                            <p class="text-muted"><i class="bi bi-clock me-1"></i> 5 Hari 4 Malam</p>
+                            <p class="card-text">Nikmati keindahan bawah laut Raja Ampat dengan snorkeling dan diving di spot terbaik dunia.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Resort Premium</li>
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Termasuk Makan 3x Sehari</li>
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Peralatan Snorkeling & Diving</li>
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Tour Guide Profesional</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <h4 class="text-primary mb-0">Rp 8.900.000</h4>
+                                <a href="#contact" class="btn btn-outline-primary">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Yogyakarta Package -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow">
+                        <img src="assets/images/yogya.jpg" class="card-img-top" alt="Yogyakarta">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="card-title mb-0">Wisata Budaya Yogyakarta</h5>
+                                <span class="badge bg-info">Populer</span>
+                            </div>
+                            <p class="text-muted"><i class="bi bi-clock me-1"></i> 3 Hari 2 Malam</p>
+                            <p class="card-text">Jelajahi kota budaya dengan mengunjungi Candi Borobudur, Keraton, Malioboro, dan Candi Prambanan.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Hotel Bintang 3</li>
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Termasuk Makan 3x Sehari</li>
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Tour Guide Profesional</li>
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Tiket Masuk Objek Wisata</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <h4 class="text-primary mb-0">Rp 2.800.000</h4>
+                                <a href="#contact" class="btn btn-outline-primary">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Labuan Bajo Package -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow">
+                        <img src="assets/images/labuan-bajo.jpg" class="card-img-top" alt="Labuan Bajo">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="card-title mb-0">Petualangan Labuan Bajo</h5>
+                                <span class="badge bg-warning">Adventure</span>
+                            </div>
+                            <p class="text-muted"><i class="bi bi-clock me-1"></i> 4 Hari 3 Malam</p>
+                            <p class="card-text">Bertemu dengan Komodo di Pulau Komodo dan menikmati keindahan Pantai Pink dan Pulau Padar.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Hotel Bintang 4</li>
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Termasuk Makan 3x Sehari</li>
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Tour Guide Profesional</li>
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Kapal Pribadi</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <h4 class="text-primary mb-0">Rp 6.500.000</h4>
+                                <a href="#contact" class="btn btn-outline-primary">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Toba Package -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow">
+                        <img src="assets/images/toba.jpg" class="card-img-top" alt="Danau Toba">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="card-title mb-0">Pesona Danau Toba</h5>
+                                <span class="badge bg-secondary">Hemat</span>
+                            </div>
+                            <p class="text-muted"><i class="bi bi-clock me-1"></i> 3 Hari 2 Malam</p>
+                            <p class="card-text">Nikmati keindahan Danau Toba dan budaya Batak di Pulau Samosir dan sekitarnya.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Hotel Bintang 3</li>
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Termasuk Makan 3x Sehari</li>
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Tour Guide Profesional</li>
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Tiket Masuk Objek Wisata</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <h4 class="text-primary mb-0">Rp 2.500.000</h4>
+                                <a href="#contact" class="btn btn-outline-primary">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-light-blue">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="mb-3">Hubungi Kami</h2>
+                <p class="lead">Jangan ragu untuk menghubungi kami untuk informasi lebih lanjut</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <h4 class="mb-4">Informasi Kontak</h4>
+                            <div class="d-flex mb-4">
+                                <div class="flex-shrink-0">
+                                    <i class="bi bi-geo-alt-fill text-primary fs-4"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h5>Alamat</h5>
+                                    <p class="mb-0">Jl. Nusantara No. 123, Jakarta Pusat, DKI Jakarta, Indonesia</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-4">
+                                <div class="flex-shrink-0">
+                                    <i class="bi bi-telephone-fill text-primary fs-4"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h5>Telepon</h5>
+                                    <p class="mb-0">+62 21 1234 5678</p>
+                                    <p class="mb-0">+62 812 3456 7890</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-4">
+                                <div class="flex-shrink-0">
+                                    <i class="bi bi-envelope-fill text-primary fs-4"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h5>Email</h5>
+                                    <p class="mb-0"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="056c6b636a457177647360696b7076646b716477642b666a68">[email&#160;protected]</a></p>
+                                    <p class="mb-0"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d3b1bcbcb8babdb493a7a1b2a5b6bfbda6a0b2bda7b2a1b2fdb0bcbe">[email&#160;protected]</a></p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <i class="bi bi-clock-fill text-primary fs-4"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h5>Jam Operasional</h5>
+                                    <p class="mb-0">Senin - Jumat: 08.00 - 17.00</p>
+                                    <p class="mb-0">Sabtu: 09.00 - 15.00</p>
+                                    <p class="mb-0">Minggu: Tutup</p>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <h5>Ikuti Kami</h5>
+                                <div class="d-flex gap-3 mt-3">
+                                    <a href="#" class="text-primary fs-4"><i class="bi bi-facebook"></i></a>
+                                    <a href="#" class="text-primary fs-4"><i class="bi bi-instagram"></i></a>
+                                    <a href="#" class="text-primary fs-4"><i class="bi bi-twitter"></i></a>
+                                    <a href="#" class="text-primary fs-4"><i class="bi bi-youtube"></i></a>
+                                    <a href="#" class="text-primary fs-4"><i class="bi bi-whatsapp"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <h4 class="mb-4">Kirim Pesan</h4>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="name" class="form-label">Nama Lengkap</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Masukkan nama lengkap" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Masukkan email" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="phone" class="form-label">Nomor Telepon</label>
+                                        <input type  class="form-label">Nomor Telepon</label>
+                                        <input type="tel" class="form-control" id="phone" placeholder="Masukkan nomor telepon" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="subject" class="form-label">Subjek</label>
+                                        <select class="form-select" id="subject" required>
+                                            <option value="" selected disabled>Pilih subjek</option>
+                                            <option value="Informasi Paket">Informasi Paket</option>
+                                            <option value="Reservasi">Reservasi</option>
+                                            <option value="Pembayaran">Pembayaran</option>
+                                            <option value="Keluhan">Keluhan</option>
+                                            <option value="Lainnya">Lainnya</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label">Pesan</label>
+                                        <textarea class="form-control" id="message" rows="5" placeholder="Tulis pesan Anda di sini" required></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary btn-lg">Kirim Pesan</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h4 class="mb-4 text-white">Travel Nusantara</h4>
+                    <p class="text-white">Menyediakan layanan perjalanan wisata terbaik di seluruh Indonesia dengan pengalaman tak terlupakan dan harga terjangkau.</p>
+                    <p class="text-white">Terdaftar dan tersertifikasi oleh Kementerian Pariwisata Republik Indonesia.</p>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="mb-4 text-white">Tautan Cepat</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#profile" class="text-white text-decoration-none">Tentang Kami</a></li>
+                        <li class="mb-2"><a href="#services" class="text-white text-decoration-none">Layanan</a></li>
+                        <li class="mb-2"><a href="#packages" class="text-white text-decoration-none">Paket Wisata</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-white text-decoration-none">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="mb-4 text-white">Destinasi Populer</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Bali</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Lombok</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Raja Ampat</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Yogyakarta</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Labuan Bajo</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Danau Toba</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="mb-4 text-white">Metode Pembayaran</h5>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge bg-light text-dark p-2">BCA</span>
+                        <span class="badge bg-light text-dark p-2">Mandiri</span>
+                        <span class="badge bg-light text-dark p-2">BNI</span>
+                        <span class="badge bg-light text-dark p-2">BRI</span>
+                        <span class="badge bg-light text-dark p-2">VISA</span>
+                        <span class="badge bg-light text-dark p-2">Mastercard</span>
+                        <span class="badge bg-light text-dark p-2">OVO</span>
+                        <span class="badge bg-light text-dark p-2">GoPay</span>
+                        <span class="badge bg-light text-dark p-2">DANA</span>
+                        <span class="badge bg-light text-dark p-2">LinkAja</span>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-md-0 text-white-50">&copy; 2023 Travel Nusantara. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white-50 text-decoration-none me-3">Syarat & Ketentuan</a>
+                    <a href="#" class="text-white-50 text-decoration-none">Kebijakan Privasi</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-primary btn-lg rounded-circle position-fixed bottom-0 end-0 translate-middle d-none d-lg-block" style="margin: 30px;">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+</html>
