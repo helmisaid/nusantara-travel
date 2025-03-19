@@ -120,6 +120,11 @@
     background-color: var(--third-color) !important;
 }
 
+.navbar-brand {
+    font-weight: 700;
+    font-family: '', sans-serif; /* Contoh font tebal */
+}
+
 footer {
     background-color: var(--third-color) !important;
 }
@@ -145,4 +150,12 @@ footer {
 
 .bi-check-circle-fill {
     color: var(--success-color) !important;
+}
+
+.nav-link {
+    color: #ffffff;
+    transition: color 0.3s ease; /* Transisi 0.3 detik */
+}
+.nav-link:hover {
+    color:rgb(139, 139, 139);
 }
